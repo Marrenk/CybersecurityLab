@@ -208,7 +208,7 @@ Hardcoded addresses work only if the environment (libc version, memory layout, A
     ``` gdb 
     pwndbg> search -t string "/bin/sh"
     ```
-    ![Output of checksec on main]('/foto/5.png')
+    ![Output of checksec on main](./foto/5.png)
   
 ### 5. Finding pop rdi and ret gadgets from libc
 To build the ROP chain necessary for the ret2libc exploit, we need specific gadgets such as `pop rdi; ret` and a standalone  `ret` for stack alignment.
@@ -217,7 +217,7 @@ To build the ROP chain necessary for the ret2libc exploit, we need specific gadg
     ``` gdb 
     pwndbg> vmmap 
     ```
-  ![Output of checksec on main]('/foto/6.png')
+  ![Output of checksec on main](./foto/6.png)
 
   - Exit GDB:
     ``` gdb 
@@ -266,7 +266,7 @@ To find the absolute address of a gadget, add the libc base address and the gadg
     ``` 
 - If everything is correct, you will drop into a shell. This demonstrates successful exploitation of the buffer overflow with a ret2libc attack.
 
-  ![Output of checksec on main]('/foto/7.png')
+  ![Output of checksec on main](./foto/7.png)
 
 ## Conclusion
 In this demo, we expected to achieve privilege escalation since the `main` executable was configured with the `SUID bit` and owned by `root`. However, even though we successfully exploited the buffer overflow and invoked `system("/bin/sh")`, as shown in the screenshot, the resulting shell did not escalate privileges but instead retained those of the calling user.
