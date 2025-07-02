@@ -1,3 +1,5 @@
+
+
 # Practical ret2libc Attack on Ubuntu 24.04.2 LTS: Exploring Buffer Overflows
 
 ## Introduction
@@ -131,7 +133,7 @@ Hardcoded addresses work only if the environment (libc version, memory layout, A
     ``` bash 
     nano main.c
     ```
-  - Compile the vulnerable program with security mitigations disabled::
+  - Compile the vulnerable program with security mitigations disabled:
     ``` bash 
     gcc -fno-stack-protector -z execstack -no-pie -o main main.c
     ```
