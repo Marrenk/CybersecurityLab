@@ -145,7 +145,7 @@ Hardcoded addresses work only if the environment (libc version, memory layout, A
     ```
     You should get an output similar to the following:
   
-    ![Output of checksec on main]('./foto/1.png')
+    ![Output of checksec on main](./foto/1.png)
 
 
   - Set the owner to root and enable the SUID bit on the binary to allow it to run with root privileges:
@@ -173,7 +173,7 @@ Hardcoded addresses work only if the environment (libc version, memory layout, A
     ```
     Inside this function, we notice a call to `gets`:
 
-    ![Output of checksec on main]('/foto/2.png')
+    ![Output of checksec on main](./foto/2.png)
 
 ### 3. Finding the Offset
 
@@ -193,8 +193,8 @@ Hardcoded addresses work only if the environment (libc version, memory layout, A
     ```
     Replace <value_of_rsp> with the value of rsp shown after the crash.
 
-    ![Output of checksec on main]('/foto/3.png')\
-    ![Output of checksec on main]('/foto/4.png')
+    ![Output of checksec on main](./foto/3.png)\
+    ![Output of checksec on main](./foto/4.png)
 
 ### 4. Finding the addresses of system() and "/bin/sh"
 
