@@ -145,7 +145,7 @@ Hardcoded addresses work only if the environment (libc version, memory layout, A
     ```
     You should get an output similar to the following:
   
-    ![Output of checksec on main]('/foto/1.png')
+    ![Output of checksec on main]('./foto/1.png')
 
 
   - Set the owner to root and enable the SUID bit on the binary to allow it to run with root privileges:
