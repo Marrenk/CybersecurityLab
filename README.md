@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
 - `offset` is the number of bytes needed to fill the buffer up to the return address on the stack. It must be calculated precisely so that the payload can actually overwrite the return address.
 
-- ***Indirizzi hardcoded***[^1]() (`system_addr`,`binsh_addr`,`pop_rdi`,`ret_gadget`):
+- ***Hardcoded addresses***[^1]() (`system_addr`,`binsh_addr`,`pop_rdi`,`ret_gadget`):
   These addresses are used for ROP (Return Oriented Programming).
 
   - `pop_rdi`: gadget that allows loading a value into the RDI register, used to pass the first argument to`system`.
